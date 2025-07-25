@@ -15,7 +15,7 @@ function SiteHeader() {
   return (
     <header className="w-full bg-white/50 backdrop-blur-lg border-b border-slate-200/80 sticky top-0 z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold text-slate-800">
+        <a href="https://buildthatthing.vercel.app/" className="text-xl font-bold text-slate-800">
           Build That Thing
         </a>
         <nav className="hidden md:flex items-center gap-4 sm:gap-6 text-sm font-medium text-slate-600">
