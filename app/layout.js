@@ -41,7 +41,7 @@ function SiteFooter() {
     return (
         <footer className="text-center py-10">
             <p className="text-sm text-slate-500">
-                Part of the <a href="https://buildthatthing.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">Build That Thing</a> suite, developed by <a href="https://oliverrevelo.vercel.app" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">Oliver Revelo</a>.
+                Part of the <a href="https://buildthatthing.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">Build That Thing</a> suite. <br />Developed by <a href="https://oliverrevelo.vercel.app" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">Oliver Revelo</a>.
             </p>
         </footer>
     );
