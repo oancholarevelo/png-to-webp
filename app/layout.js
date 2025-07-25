@@ -27,7 +27,7 @@ function SiteHeader() {
           <a href="https://convertthatimage.vercel.app/" className="flex items-center gap-2 text-indigo-600 font-semibold">
             <span className="hidden sm:inline">Image Converter</span>
           </a>
-          <a href="https://launchthatlinkpage.vercel.app/" className="flex items-center gap-2 text-indigo-600 font-semibold">
+          <a href="https://launchthatlinkpage.vercel.app/" className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
             <span className="hidden sm:inline">Linkpage Builder</span>
           </a>
         </nav>
@@ -77,10 +77,10 @@ function SiteFooter() {
                         <h3 className="font-semibold text-slate-800">Navigate</h3>
                         <ul className="mt-2 space-y-1 text-center md:text-right">
                             <li><a href="https://buildthatthing.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Build That Thing</a></li>
-                            <li><a href="https://buildthatinvoice.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Build That Invoice</a></li>
-                            <li><a href="https://buildthatresume.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Build That Resume</a></li>
-                            <li><a href="https://convertthatimage.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Convert That Image</a></li>
-                            <li><a href="https://launchthatlinkpage.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Launch That Linkpage</a></li>
+                            <li><a href="https://buildthatinvoice.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Invoice Builder</a></li>
+                            <li><a href="https://buildthatresume.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Resume Builder</a></li>
+                            <li><a href="https://convertthatimage.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Image Converter</a></li>
+                            <li><a href="https://launchthatlinkpage.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Linkpage Builder</a></li>
                         </ul>
                     </div>
                 </div>
