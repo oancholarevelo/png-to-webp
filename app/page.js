@@ -318,7 +318,7 @@ export default function ConvertThatImagePage() {
   const doneCount = imageList.filter(i => i.status === 'done').length;
 
   return (
-    <div className="text-slate-800 font-sans flex flex-col items-center px-4 pt-8 sm:pt-10 lg:pt-12 pb-10">
+    <div className="text-slate-800 flex flex-col items-center px-4 pt-8 sm:pt-10 lg:pt-12 pb-10">
       <div className="w-full max-w-7xl">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
