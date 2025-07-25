@@ -1,28 +1,65 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Briefcase, FileText, Image as ImageIcon } from 'lucide-react';
 
-// Initialize the Inter font, specifying the 'latin' subset.
 const inter = Inter({ subsets: ["latin"] });
 
-// Define the metadata for the application.
-// This will be used for SEO and the browser tab title.
 export const metadata = {
-  title: "Optimized WebP Converter",
-  description: "A fast, client-side image to WebP converter built with Next.js and Web Workers.",
+  title: "Convert That Image | Build That Thing",
+  description: "A powerful, client-side image converter for the Build That Thing suite of tools.",
 };
-/**
- * RootLayout is the main layout component that wraps around all pages.
- * @param {object} props - The properties for the component.
- * @param {React.ReactNode} props.children - The child components (the actual pages) to be rendered inside the layout.
- * @returns {JSX.Element} The root layout of the application.
- */
+
+// --- Shared Header Component ---
+function SiteHeader() {
+  return (
+    <header className="w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4 flex justify-between items-center">
+        <a href="#" className="text-xl font-bold text-slate-800">
+          Build That Thing
+        </a>
+        <nav className="flex items-center gap-4 sm:gap-6 text-sm font-medium text-slate-600">
+          <a href="#" className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
+            <FileText size={16} />
+            <span className="hidden sm:inline">Invoice</span>
+          </a>
+          <a href="#" className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
+            <Briefcase size={16} />
+            <span className="hidden sm:inline">Resume</span>
+          </a>
+          <a href="#" className="flex items-center gap-2 text-indigo-600 font-semibold">
+            <ImageIcon size={16} />
+            <span className="hidden sm:inline">Image</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+// --- Shared Footer Component ---
+function SiteFooter() {
+  return (
+    <footer className="text-center py-10">
+      <p className="text-sm text-slate-500">
+        Part of the <span className="font-semibold">Build That Thing</span> suite of productivity tools.
+      </p>
+    </footer>
+  );
+}
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* Apply the Inter font class to the body.
-        The `children` prop here will be your `page.js` component.
-      */}
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-slate-100`}>
+        <div className="flex flex-col min-h-screen">
+          <SiteHeader />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <SiteFooter />
+        </div>
+      </body>
     </html>
   );
 }
