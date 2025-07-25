@@ -8,28 +8,27 @@ import { useState } from 'react';
 
 const inter = Inter({ subsets: ["latin"] });
 
-// --- Shared Header Component ---
 function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="w-full bg-white/50 backdrop-blur-lg border-b border-slate-200/80 sticky top-0 z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4 flex justify-between items-center">
-        <a href="https://buildthatthing.vercel.app/" className="text-xl font-bold text-slate-800">
+        <a href="#" className="text-xl font-bold text-slate-800">
           Build That Thing
         </a>
         <nav className="hidden md:flex items-center gap-4 sm:gap-6 text-sm font-medium text-slate-600">
           <a href="https://buildthatinvoice.vercel.app/" className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
             <FileText size={16} />
-            <span className="hidden sm:inline">Invoice</span>
+            <span className="hidden sm:inline">Build That Invoice</span>
           </a>
           <a href="https://buildthatresume.vercel.app/" className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
             <Briefcase size={16} />
-            <span className="hidden sm:inline">Resume</span>
+            <span className="hidden sm:inline">Build That Resume</span>
           </a>
           <a href="https://convertthatimage.vercel.app/" className="flex items-center gap-2 text-indigo-600 font-semibold">
             <ImageIcon size={16} />
-            <span className="hidden sm:inline">Image</span>
+            <span className="hidden sm:inline">Convert That Image</span>
           </a>
         </nav>
         <div className="md:hidden">
@@ -38,13 +37,15 @@ function SiteHeader() {
           </button>
         </div>
       </div>
-      {isMenuOpen && (
-        <div className="md:hidden bg-white/80 backdrop-blur-lg">
-          <a href="https://buildthatinvoice.vercel.app/" className="block py-3 px-4 text-sm font-medium text-slate-600 hover:bg-slate-100 border-t border-slate-200/80">Invoice Builder</a>
-          <a href="https://buildthatresume.vercel.app/" className="block py-3 px-4 text-sm font-medium text-slate-600 hover:bg-slate-100 border-t border-slate-200/80">Resume Builder</a>
-          <a href="https://convertthatimage.vercel.app/" className="block py-3 px-4 text-sm font-medium text-slate-600 hover:bg-slate-100 border-t border-slate-200/80">Image Converter</a>
-        </div>
-      )}
+      
+      {/* --- SMOOTHER ANIMATION MENU --- */}
+      <div className={`grid md:hidden bg-white/80 backdrop-blur-lg overflow-hidden transition-[grid-template-rows] duration-300 ease-in-out ${isMenuOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+          <div className="min-h-0">
+            <a href="https://buildthatinvoice.vercel.app/" className="block py-3 px-4 text-sm font-medium text-slate-600 hover:bg-slate-100 border-t border-slate-200/80">Build That Invoice</a>
+            <a href="https://buildthatresume.vercel.app/" className="block py-3 px-4 text-sm font-medium text-slate-600 hover:bg-slate-100 border-t border-slate-200/80">Build That Resume</a>
+            <a href="https://convertthatimage.vercel.app/" className="block py-3 px-4 text-sm font-medium text-slate-600 hover:bg-slate-100 border-t border-slate-200/80">Convert That Image</a>
+          </div>
+      </div>
     </header>
   );
 }
@@ -74,10 +75,10 @@ function SiteFooter() {
                     <div className="flex flex-col items-center md:items-end">
                         <h3 className="font-semibold text-slate-800">Navigate</h3>
                         <ul className="mt-2 space-y-1 text-center md:text-right">
-                            <li><a href="https://buildthatthing.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Build That Thing Home</a></li>
-                            <li><a href="https://buildthatinvoice.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Invoice Builder</a></li>
-                            <li><a href="https://buildthatresume.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Resume Builder</a></li>
-                            <li><a href="https://convertthatimage.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Image Converter</a></li>
+                            <li><a href="https://buildthatthing.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Build That Thing</a></li>
+                            <li><a href="https://buildthatinvoice.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Build That Invoice</a></li>
+                            <li><a href="https://buildthatresume.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Build That Resume</a></li>
+                            <li><a href="https://convertthatimage.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Convert That Image</a></li>
                         </ul>
                     </div>
                 </div>
