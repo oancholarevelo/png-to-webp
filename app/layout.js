@@ -1,23 +1,24 @@
+// app/layout.js
+'use client';
+
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Briefcase, FileText, Image as ImageIcon, Github, Link as LinkIcon } from 'lucide-react';
+import { Briefcase, FileText, Image as ImageIcon, Menu, X } from 'lucide-react';
+import { useState } from 'react';
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Convert That Image | Build That Thing",
-  description: "A powerful, client-side image converter for the Build That Thing suite of tools.",
-};
-
 // --- Shared Header Component ---
 function SiteHeader() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="w-full bg-white/50 backdrop-blur-lg border-b border-slate-200/80 sticky top-0 z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4 flex justify-between items-center">
         <a href="#" className="text-xl font-bold text-slate-800">
           Build That Thing
         </a>
-        <nav className="flex items-center gap-4 sm:gap-6 text-sm font-medium text-slate-600">
+        <nav className="hidden md:flex items-center gap-4 sm:gap-6 text-sm font-medium text-slate-600">
           <a href="https://buildthatinvoice.vercel.app/" className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
             <FileText size={16} />
             <span className="hidden sm:inline">Invoice</span>
@@ -31,7 +32,19 @@ function SiteHeader() {
             <span className="hidden sm:inline">Image</span>
           </a>
         </nav>
+        <div className="md:hidden">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 rounded-md hover:bg-slate-200/60 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
+      {isMenuOpen && (
+        <div className="md:hidden bg-white/80 backdrop-blur-lg">
+          <a href="https://buildthatinvoice.vercel.app/" className="block py-3 px-4 text-sm font-medium text-slate-600 hover:bg-slate-100 border-t border-slate-200/80">Invoice Builder</a>
+          <a href="https://buildthatresume.vercel.app/" className="block py-3 px-4 text-sm font-medium text-slate-600 hover:bg-slate-100 border-t border-slate-200/80">Resume Builder</a>
+          <a href="https://convertthatimage.vercel.app/" className="block py-3 px-4 text-sm font-medium text-slate-600 hover:bg-slate-100 border-t border-slate-200/80">Image Converter</a>
+        </div>
+      )}
     </header>
   );
 }

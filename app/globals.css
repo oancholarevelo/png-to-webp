@@ -5,16 +5,13 @@
   --foreground: #1e293b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0b1120;
-    --foreground: #e2e8f0;
-  }
-}
-
 body {
   background-color: var(--background);
   color: var(--foreground);
   /* font-family rule removed from here to allow layout.js to take control */
   background-image: radial-gradient(circle at top left, #e0e7ff, transparent 40%), radial-gradient(circle at bottom right, #e0f2fe, transparent 50%);
+}
+
+html {
+  scroll-behavior: smooth;
 }
