@@ -26,7 +26,7 @@ function SiteHeader() {
             <Briefcase size={16} />
             <span className="hidden sm:inline">Resume</span>
           </a>
-          <a href="https://converthatimage.vercel.app/" className="flex items-center gap-2 text-indigo-600 font-semibold">
+          <a href="https://convertthatimage.vercel.app/" className="flex items-center gap-2 text-indigo-600 font-semibold">
             <ImageIcon size={16} />
             <span className="hidden sm:inline">Image</span>
           </a>
@@ -64,7 +64,7 @@ function SiteFooter() {
                             <li><a href="https://buildthatthing.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Build That Thing Home</a></li>
                             <li><a href="https://buildthatinvoice.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Invoice Builder</a></li>
                             <li><a href="https://buildthatresume.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Resume Builder</a></li>
-                            <li><a href="https://converthatimage.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Image Converter</a></li>
+                            <li><a href="https://convertthatimage.vercel.app/" className="text-slate-500 hover:text-indigo-600 transition-colors">Image Converter</a></li>
                         </ul>
                     </div>
                 </div>
