@@ -18,15 +18,15 @@ function SiteHeader() {
           Build That Thing
         </a>
         <nav className="flex items-center gap-4 sm:gap-6 text-sm font-medium text-slate-600">
-          <a href="#" className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
+          <a href="https://buildthatinvoice.vercel.app/" className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
             <FileText size={16} />
             <span className="hidden sm:inline">Invoice</span>
           </a>
-          <a href="#" className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
+          <a href="https://buildthatresume.vercel.app/" className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
             <Briefcase size={16} />
             <span className="hidden sm:inline">Resume</span>
           </a>
-          <a href="#" className="flex items-center gap-2 text-indigo-600 font-semibold">
+          <a href="https://converthatimage.vercel.app/" className="flex items-center gap-2 text-indigo-600 font-semibold">
             <ImageIcon size={16} />
             <span className="hidden sm:inline">Image</span>
           </a>
@@ -38,13 +38,13 @@ function SiteHeader() {
 
 // --- Shared Footer Component ---
 function SiteFooter() {
-  return (
-    <footer className="text-center py-10">
-      <p className="text-sm text-slate-500">
-        Part of the <span className="font-semibold">Build That Thing</span> suite of productivity tools.
-      </p>
-    </footer>
-  );
+    return (
+        <footer className="text-center py-10">
+            <p className="text-sm text-slate-500">
+                Part of the <a href="https://buildthatthing.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">Build That Thing</a> suite, developed by <a href="https://oliverrevelo.vercel.app" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">Oliver Revelo</a>.
+            </p>
+        </footer>
+    );
 }
 
 
